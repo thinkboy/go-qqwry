@@ -2,7 +2,6 @@ package qqwry
 
 import (
 	"bytes"
-	"fmt"
 	iconv "github.com/zyxar/go-iconv"
 	"net"
 	"os"
