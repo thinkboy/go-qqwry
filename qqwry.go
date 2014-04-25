@@ -101,7 +101,7 @@ func (qw *QQWry) QueryIP(ip string) (countryStr, areaStr string) {
 	}
 
 	cz88 := []byte("CZ88.NET")
-	if bytes.Compare(country[1:], cz88) != 0 {
+	if len(country) > 1 && bytes.Compare(country[1:], cz88) != 0 {
 		countryStr, _ = iconv.Conv(string(country), locale, "GBK")
 	}
 
